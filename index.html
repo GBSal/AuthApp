@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="MyAppAnon">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Style Sheets-->
+
+    <title>Auth Test</title>
+</head>
+<body>
+
+    <div id="page1" data-role="page1">
+        <div id="header-container" data-include="header">
+        </div>
+        <div id="content-container" data-role="content">
+            <div data-ng-view=""></div>
+        </div>
+        <div id="footer-container" class="clearfix" data-include="footer">
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script src="content/scripts/jquery.min.js"></script>
+    <script src="content/scripts/angular.min.js"></script>
+
+    <script type="text/javascript">
+        var isMobile = false;
+        try {
+            isMobile = !!forge.is.mobile();
+        }
+        catch (e) {
+        }
+
+        document.write("<script src='configData" +
+            (isMobile ? "_Mob" : "_Svr") +
+            ".js'><\/script>");
+    </script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            try {
+                if (isMobile) {
+                    // use device topbar - hide web header
+                    $('#header-container').hide();
+                    $('#footer-container').hide();
+                    forge.logging.info("doc ready index.html");
+
+                    forge.topbar.setTitle("MyChild");   // TODO: i18n - data-locale-string="_StartScreenLabel_"
+                    //forge.topbar.removeButtons();
+                    //forge.topbar.setTint([32, 187, 214, 200]);  // TODO: colour theme
+                }
+            }
+            catch (e) { }
+        });
+</script>
+    
+    <!--UI Libs-->
+    <script src="content/scripts/ui-bootstrap-0.3.0.min.js"></script>
+    <script src="content/scripts/ui-bootstrap-custom-tpls-0.3.0.min.js"></script>
+    <script src="content/scripts/bootstrap.js"></script>
+    <script src="directives/localize.js"></script>
+
+    <!--App Libs-->
+    <script src="app_anon.js"></script>
+   
+   <!--Controllers--> 
+    <script src="controllers/SignUpController.js"></script>
+    <script src="services/SignUpService.js"></script>
+    <script src="controllers/LoginController.js"></script>
+    <script src="services/LoginService.js"></script>
+<!--    <script src="directives/animatedView.js"></script>-->
+
+</body>
+</html>

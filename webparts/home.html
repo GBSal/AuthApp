@@ -1,0 +1,16 @@
+﻿<div id="main-content-control">
+    <div>
+        <span>User Roles</span>
+        <ul>
+            <li data-ng-repeat="role in UserRoles">{{role.UserID}}   -  {{role.RoleName}}    -  {{role.RoleDescription}}</li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <div>
+        <span><a data-ng-click="GetAllRoles()" style="color: blue; text-decoration: underline; cursor: pointer">Get all User Roles </a></span>
+        <ul>
+            <li data-ng-repeat="r in AllUserRoles">{{r.UserID}}   -  {{r.RoleName}}    -  {{r.RoleDescription}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="MyApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Auth Test</title>
+</head>
+<body>
+
+    <div id="page1" data-role="page1">
+        <div id="header-container" data-include="header">
+        </div>
+        <div id="content-container" data-role="content">
+            <div data-ng-view=""></div>
+        </div>
+        <div id="footer-container" data-include="footer">
+        </div>
+    </div>
+
+   <script src="content/scripts/jquery.min.js"></script>
+    <script src="content/scripts/angular.min.js"></script>
+    <script src="content/scripts/angular-cookies.min.js"></script>
+
+
+    
+    <!--UI Libs-->
+    <script src="content/scripts/ui-bootstrap-0.3.0.min.js"></script>
+    <script src="content/scripts/ui-bootstrap-custom-tpls-0.3.0.min.js"></script>
+    <script src="content/scripts/bootstrap.js"></script>
+    
+    
+
+    <!--App Libs-->
+    <script src="app.js"></script>
+    
+    
+
+   <!--Controllers--> 
+    <script src="controllers/MainController.js"></script>
+  
+
+</body>
+</html>

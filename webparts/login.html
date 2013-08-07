@@ -1,0 +1,37 @@
+﻿<div id="main-content-control">
+
+    <form data-ng-controller="LoginController" ng-submit="doLogin()" class="basic" name="lform">
+        <div class="control-group" ng-class="{error: lform.Username.$invalid}">
+            <label class="field_label">User Name</label>
+            <input type="text" name="Username" ng-model="Username" required />
+        </div>
+        <p>
+            <label class="field_label">Password</label>
+            <input type="password" name="Password" ng-model="Password" required />
+        </p>
+
+        <br />
+        <br />
+        <div class="action-button-blue login" id="btnLogin">
+            <input type="submit" data-locale-string-attr="_LogInButton_|value" data-ng-disabled="isClean()||lform.$invalid" />
+        </div>
+        <br />
+        <br />
+        <br />
+        <span>Try below logins</span>
+        <ul>
+            <li>
+                <h4>Login 1 </h4>
+                <br />
+                User Name : Joe , Password : Black
+            </li>
+            <li>
+                <h4>Login 2 </h4>
+                <br />
+                User Name :John   , Password : lewis
+            </li>
+
+
+        </ul>
+    </form>
+</div>
