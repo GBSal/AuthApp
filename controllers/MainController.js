@@ -28,8 +28,8 @@
 
     $scope.GetAllRoles = function () {
 
-        //var url = 'http://192.168.1.2:62404/api/Values/GetAllRoles';
-        var url = '/api/Values/GetAllRoles';
+        var url = 'http://192.168.1.2:62404/api/Values/GetAllRoles';
+      //  var url = '/api/Values/GetAllRoles';
 
         $http({ method: "GET", url: url, data: {} })
 
