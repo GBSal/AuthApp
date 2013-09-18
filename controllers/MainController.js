@@ -7,9 +7,9 @@
 
     function init() {
 
-        //var url = 'http://192.168.1.2:62404/api/Values/Get';
+        var url = 'http://192.168.1.2:62404/api/Values/Get';
 
-        var url = '/api/Values/Get';
+    //    var url = '/api/Values/Get';
         $http({ method: "GET", url: url, data: {} })
 
             .success(function (data, status, headers, config) {
